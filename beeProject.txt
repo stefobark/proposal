@@ -1,0 +1,64 @@
+Due to the difficulties of interacting with the CEO of a Russian Software company, and working with a code base written by a team of Russian programmers, I’ve realized that my original project proposal is not a good one.
+
+
+So, based on a conversation that we had (while walking to school) I’ve decided to write a new project proposal. 
+
+
+Over the summer I worked on a book called the Nature of Code http://natureofcode.com/ written by Daniel Shiffman. It introduced me to concepts such as vectors (for moving objects in animations), forces (doing vector math so that objects can interact), he taught me about oscillation, particle systems, he introduced me to various physics libraries and I was able to implement small projects using physics libraries instead of my own code, then I was introduced to ‘autonomous agents’, cellular automata, fractals, genetic algorithms, and neural networks.
+
+
+The project I propose now will focus on the main piece of work I produced from the individual study contract (Richard Weiss was my sponsor). I created a simulation of a number of bee hives. 
+
+
+The code can be found here: https://github.com/stefobark/bees (and the readme explains my thinking about the project). I’ve begun to review the code and will soon turn in a progress report.
+
+
+The idea was based on ‘smart rockets’. And, here is my version of ‘smart rockets’ (uses a genetic algorithm to produce generations of rockets that learn how to hit a moving target): https://youtu.be/ve0-dPphb3o 
+
+
+The idea:
+
+
+* Each bee hive produced generations of bees. 
+* Each bee followed a random path in an attempt to reach a flower. 
+* The bees that got closer to the flower got a higher ‘fitness scores’. 
+* The bees that actually hit the flower got even higher fitness scores. 
+* And the bees that hit the flower and returned home within the shortest amount of time got really high fitness scores. 
+* Subsequent generations of bees were produced by mixing the genes of the previous generation, with the bees with higher fitness scores having a higher chance of reproducing.
+
+
+I then noticed that certain parameters of the bee hives themselves produced more successful bees. Richard suggested I apply the same concept (genetic algorithm) to the bee hives. So, I created a number of bee hives and gave the bee hives with the highest number of bees to hit the flower and return home within a specified time, the highest fitness scores. 
+
+
+The parameters that important to the success of a beehive were
+* the max force of the bees, 
+* the number of bees in a generation, 
+* the lifetime of the bees, 
+* and (off the top of my, I think..) there were a few more. 
+
+
+I then began to learn about neural networks. 
+
+
+I created a predator bee that sought the nearest bee and attacked it. If it came within a certain proximity of the prey bee, that bee would ‘die’. The constant checking of the location of all the bees of from all the hives was too expensive, my program became really laggy.
+
+
+So…
+
+
+1. I want to review my code (clean it up, write better comments)
+2. Create more efficient data structures for bee populations, bee hives, and predator bees. 
+3. Another thing that Richard suggested was to implement neural networks for all levels of evolution instead of using genetic algorithms. 
+4. Also, Daniel Shiffman suggested a solution to the problem of the predator bee having to check the location of every bee in the window. I forget the process, but I plan to implement to make my simulation as efficient as possible.
+
+
+So…
+* I would have to learn more about neural networks. 
+* I would be able to implement what I have learned about data structures to enhance the performance of my simulation. 
+   * Previously, throughout this simulation, I was creating my own user defined data structures without knowing much at all about what a data structure was.
+
+
+I am much more passionate about this project and I have confidence that I would get much more done (and be happier) than if I were to simply review a large code base and make some small insignificant changes. 
+
+
+So hopefully, my project switch is acceptable.
